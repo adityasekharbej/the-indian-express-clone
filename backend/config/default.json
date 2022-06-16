@@ -1,0 +1,9 @@
+{
+  "news": {
+    "dbConfig": {
+      "host": "localhost",
+      "port": 5984,
+      "dbName": "mongodb+srv://DBuser:54fhXTVTQJxpLPxP@unit5cluster.iipoe.mongodb.net/News?retryWrites=true&w=majority"
+    }
+  }
+}
