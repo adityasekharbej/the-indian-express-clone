@@ -1,13 +1,26 @@
 
 import './App.css';
-import { HomeHeader } from './components/HomeHeader';
+import Footer from "./components/Footer"
+import Slideshow from './components/SlideShow'
+import TopComponent from './components/TopComponent'
+import Subscribe from './components/Subscribe'
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <HomeHeader/>
+       <Footer />
+      {/* <Slideshow /> */}
+      {/* <TopComponent /> */}
+      {/* <Subscribe /> */}
     </div>
   );
 }
 
 export default App;
+
+
+
+
