@@ -20,5 +20,5 @@
       }],
     }
 
-2.  /
+2.  /home
     bring 15 news document is same format as above    

@@ -13,7 +13,7 @@ newsRouter.get("/:tags", async (req, res) => {
   // console.log("params", tags);
   try {
     const data = await News.find({ tags: tags });
-    console.log(data);
+    // console.log(data);
     res.status(200).send({
       message: "data received successfully",
       data: data,
