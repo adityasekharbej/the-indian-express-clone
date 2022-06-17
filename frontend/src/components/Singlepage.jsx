@@ -15,37 +15,38 @@ function Singlepage(props) {
     return (
         <Fragment>
         <div className={styles.container}>
+          {/* <hr color='grey'/> */}
           <br />
           <div className={styles.headnews}>
             <div className={styles.breakingti}>Must Read</div>
             <div className={styles.breakingbox}><Ticcker/></div>
           </div>
-            <div><h1 className={styles.heading} >{Data[0].heading}</h1></div>
-            <div><h2 className={styles.sub_heading}>{Data[0].subHeading}</h2></div>
+            <div style={{marginBottom:"-25px"}}><h1 className={styles.heading} >{Data[0].heading}</h1></div>
+            <div style={{marginBottom:"-10px"}}><h2 className={styles.sub_heading}>{Data[0].subHeading}</h2></div>
             <hr />
             <div className={styles.editor}>
                 <div>
-              <span>By:<a style={{ fontWeight: 'bold' }}>{Data[0].author }</a> |</span>
+              <span>By:<a style={{ fontWeight: 'bold',textDecoration:'underline black'}}>{Data[0].author }</a> |</span>
                     <p>{Data[0].date}</p>
                     </div>
                     <div className={styles.social}>
-             <div class="social-container">
+             <div class={styles.socialdivf}>
       <a href=""
         className="facebook social">
-        <FontAwesomeIcon icon={faFacebook} size="3x" />
+        <FontAwesomeIcon icon={faFacebook} size="3x" color='white' />
       </a>
                         </div>
-                        <div class="social-container">
+                        <div className={styles.socialdivt}>
       <a href=""
         className="facebook social">
-        <FontAwesomeIcon icon={faTwitter} size="3x" color='lightblue' />
+        <FontAwesomeIcon icon={faTwitter} size="2x" color='white'  />
       </a>
                     </div>
-                    <div class="social-container">
+                    <div className={styles.socialdivr}>
                         
       <a href=""
         className="reddit social">
-        <FontAwesomeIcon icon={faReddit} size="3x" />
+        <FontAwesomeIcon icon={faReddit} size="2x" color='white'  />
       </a>
                         </div>
                         </div>
