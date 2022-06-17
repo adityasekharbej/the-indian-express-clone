@@ -4,6 +4,8 @@ import Slideshow from "./components/SlideShow";
 import TopComponent from "./components/TopComponent";
 import Subscribe from "./components/Subscribe";
 import { HomeHeader } from "./components/HomeHeader";
+import { Home } from "./components/Home";
+import { India } from "./components/India";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       {/* <Slideshow /> */}
       {/* <TopComponent /> */}
       {/* <Subscribe /> */}
+      {/* <Home/> */}
+      <India/>
     </div>
   );
 }
