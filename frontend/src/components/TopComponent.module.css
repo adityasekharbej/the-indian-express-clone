@@ -1,0 +1,42 @@
+.leftrg{
+    height: 722px;
+    width: 55%;
+    border: 1px solid grey;
+}
+
+.leftToprg{
+    border: 1px solid grey;
+}
+
+.a{
+    height: 240px;
+    width: 290px;
+    border: 1px solid grey;
+    margin-left: 20px;
+}
+
+.b{
+    height: 240px;
+    width: 290px;
+    border: 1px solid grey;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.rajat{
+    display: flex;
+}
+
+.rajat > div{
+    height: 200px;
+    width: 32%;
+    border: 1px solid grey;
+}
+
+.rajat > div:nth-child(2){
+    margin-left: 2%;
+}
+
+.rajat > div:nth-child(3){
+    margin-left: 2%;
+}
