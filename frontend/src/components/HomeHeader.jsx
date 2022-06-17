@@ -8,7 +8,13 @@ export const HomeHeader = () => {
   const handleToggle = () => {
     setToggle(!toggle);
   };
-  return <div>
-{toggle? <Header handleToggle={handleToggle}/>:<Menu handleToggle={handleToggle}/>}
-  </div>;
+  return (
+    <div>
+      {toggle ? (
+        <Header handleToggle={handleToggle} />
+      ) : (
+        <Menu handleToggle={handleToggle} />
+      )}
+    </div>
+  );
 };
