@@ -116,7 +116,7 @@ export const Header = ({ handleToggle }) => {
             onClick={() => navigate("/")}
             src="https://indianexpress.com/wp-content/themes/indianexpress/images/indian-express-logo-n.svg"
             alt=""
-            style={{cursor: "pointer"}}
+            style={{ cursor: "pointer" }}
           />
           <p>Sunday, June 19, 2022</p>
         </div>
