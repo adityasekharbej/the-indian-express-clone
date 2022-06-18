@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Outer = styled.div`
-  width: 300px;
+  width: 100%;
   text-align: left;
 `;
 

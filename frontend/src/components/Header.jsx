@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Search from "./Search";
+import { useNavigate } from "react-router-dom";
 
 const TopDiv = styled.div`
   font-family: Roboto, sans-serif;
@@ -76,9 +77,9 @@ const Category = styled.div`
   & p {
     cursor: pointer;
   }
-//   & p:hover {
-//     border-bottom: 4px solid #ff0303;
-//   }
+  //   & p:hover {
+  //     border-bottom: 4px solid #ff0303;
+  //   }
 `;
 
 const Sub = styled.p`
@@ -89,6 +90,7 @@ const Sub = styled.p`
 `;
 
 export const Header = ({ handleToggle }) => {
+  const navigate = useNavigate();
   return (
     <div>
       <TopDiv>
@@ -111,8 +113,10 @@ export const Header = ({ handleToggle }) => {
         </SubDiv>
         <div>
           <img
+            onClick={() => navigate("/")}
             src="https://indianexpress.com/wp-content/themes/indianexpress/images/indian-express-logo-n.svg"
             alt=""
+            style={{cursor: "pointer"}}
           />
           <p>Sunday, June 19, 2022</p>
         </div>
@@ -124,13 +128,13 @@ export const Header = ({ handleToggle }) => {
           <i class="fa-solid fa-bars" onClick={handleToggle}></i>
         </div>
         <Category>
-          <p>Home</p>
+          <p onClick={() => navigate("/")}>Home</p>
           <p>Explained</p>
           <p>Political Pulse</p>
-          <p>India</p>
-          <p>Cities</p>
+          <p onClick={() => navigate("/india")}>India</p>
+          <p onClick={() => navigate("/cities")}>Cities</p>
           <p>Opinion</p>
-          <p>Entertainment</p>
+          <p onClick={() => navigate("/entertainment")}>Entertainment</p>
           <p>Education</p>
           <p>Premium</p>
           <p>Sports</p>
@@ -140,7 +144,7 @@ export const Header = ({ handleToggle }) => {
         </Category>
         <div>
           {/* <i class="fa-solid fa-magnifying-glass"></i> */}
-          <Search/>
+          <Search />
         </div>
       </BottomDiv>
     </div>

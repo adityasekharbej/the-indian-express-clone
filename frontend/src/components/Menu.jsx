@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from 'react-router-dom';
 
 const Wrapper = styled.div`
   background-color: #efefef;
@@ -49,6 +50,8 @@ const Icon = styled.div`
 `;
 
 export const Menu = ({handleToggle}) => {
+  const navigate = useNavigate();
+
   return (
     <Wrapper>
       <Icon>
@@ -58,13 +61,13 @@ export const Menu = ({handleToggle}) => {
         <Flex>
           <div>
             <p>
-              <b>Home</b>
+              <b onClick={() => navigate("/")}>Home</b>
             </p>
             <p>
               <b>World</b>
             </p>
             <p>
-              <b>India</b>
+              <b onClick={() => navigate("/india")}>India</b>
             </p>
             <p>
               <b>North East Indian</b>
@@ -95,9 +98,9 @@ export const Menu = ({handleToggle}) => {
             </p>
             <p>Explained</p>
             <p>Technology</p>
-            <p>Entertainment</p>
+            <p onClick={() => navigate("/entertainment")}>Entertainment</p>
             <p>Lifestyle</p>
-            <p>FOod</p>
+            <p>Food</p>
             <p>Sports</p>
             <p>Auto</p>
             <p>Idea Exchange</p>

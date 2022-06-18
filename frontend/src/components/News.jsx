@@ -4,13 +4,14 @@ import styled from "styled-components";
 import { openNews } from "../Redux/action";
 
 const Wrapper = styled.div`
-  width: 650px;
+  width: 100%;
   display: flex;
   text-align: left;
   border-bottom: 1px solid #dbdbdb;
   clear: both;
   overflow: hidden;
   padding: 10px 0;
+  margin-top: 30px;
 
   & > div:last-child {
     padding: 0;
