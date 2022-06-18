@@ -19,6 +19,8 @@ function Singlepage(props) {
           <br />
           <div className={styles.headnews}>
             <div className={styles.breakingti}>Must Read</div>
+
+            
             <div className={styles.breakingbox}><Ticcker/></div>
           </div>
             <div style={{marginBottom:"-25px"}}><h1 className={styles.heading} >{Data[0].heading}</h1></div>
