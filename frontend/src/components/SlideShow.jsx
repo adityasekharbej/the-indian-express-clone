@@ -51,7 +51,7 @@ function Slideshow() {
             key={index}
             style={{ backgroundColor }}
           >
-            <img src={images[index]} />
+            <img src={images[index]} style={{width: '100%', height: '380px'}} alt=""/>
           </div>
         ))}
       </div>

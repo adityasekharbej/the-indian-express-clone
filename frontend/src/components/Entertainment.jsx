@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { getData } from "../Redux/action";
 import { News } from "./News";
 
-export const Home = () => {
+export const Entertainment = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     fetch("https://indianexpresscloneunit.herokuapp.com/news/entertainment")

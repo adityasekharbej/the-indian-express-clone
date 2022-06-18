@@ -1,24 +1,22 @@
 import "./App.css";
-// import Footer from "./components/Footer";
-// import Slideshow from "./components/SlideShow";
-// import TopComponent from "./components/TopComponent";
-// import Subscribe from "./components/Subscribe";
-// import { HomeHeader } from "./components/HomeHeader";
-import { Home } from "./components/Home";
-// import { India } from "./components/India";
-import Singlepage from "./components/Singlepage";
+import HomePage from "./pages/HomePage";
+import { useState } from "react";
+import { Menu } from './components/Menu';
 
 function App() {
+  const [toggle, setToggle] = useState(true);
+
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <div className="App">
-      <Singlepage />
-      {/* <HomeHeader /> */}
-      {/* <Footer /> */}
-      {/* <Slideshow /> */}
-      {/* <TopComponent /> */}
-      {/* <Subscribe /> */}
-      <Home/>
-      {/* <India/> */}
+       {toggle ? (
+        <HomePage handleToggle={handleToggle} />
+      ) : (
+        <Menu handleToggle={handleToggle} />
+      )}
     </div>
   );
 }
