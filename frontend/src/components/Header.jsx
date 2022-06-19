@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Search from "./Search";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import { useEffect } from "react";
@@ -68,6 +68,7 @@ const BottomDiv = styled.div`
   font-size: 14px;
   font-weight: 600;
   padding: 0 15px;
+  margin-bottom: 30px;
   & i {
     font-size: 25px;
     cursor: pointer;
@@ -79,9 +80,9 @@ const Category = styled.div`
   & p {
     cursor: pointer;
   }
-  //   & p:hover {
-  //     border-bottom: 4px solid #ff0303;
-  //   }
+    & p:hover {
+      color: #ff0303;
+    }
 `;
 
 const Sub = styled.p`
