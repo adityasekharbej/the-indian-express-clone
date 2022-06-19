@@ -147,8 +147,8 @@ export const Best = () => {
         <H>BEST OF EXPRESS</H>
       </div>
       <div>
-        {bst.map((el) => (
-          <Flex>
+        {bst.map((el, index) => (
+          <Flex key={index}>
             <div>
               <img src={el.img} alt="" />
             </div>

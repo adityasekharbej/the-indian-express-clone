@@ -31,12 +31,12 @@ const Wrapper = styled.div`
       cursor: pointer;
     }
     & p:last-child {
-        padding-top: 12px;
-        font-size: 10px;
-        color: #7a7a7a;    
+      padding-top: 12px;
+      font-size: 10px;
+      color: #7a7a7a;
     }
-    & p:first-child:hover{
-        color: #3385d0;
+    & p:first-child:hover {
+      color: #3385d0;
     }
   }
 `;
@@ -89,8 +89,8 @@ export const Blog = () => {
         <p>BLOG</p>
       </Head>
       <Wrapper>
-        {blg.map((el) => (
-          <div>
+        {blg.map((el, index) => (
+          <div key={index}>
             <p>{el.title}</p>
             <p>{el.time}</p>
           </div>

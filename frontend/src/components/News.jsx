@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Navigate, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { openNews } from "../Redux/action";
 
@@ -23,7 +24,7 @@ const Wrapper = styled.div`
 const Img = styled.img`
   width: 270px;
   height: 150px;
-  cursor:pointer;
+  cursor: pointer;
 `;
 const H3 = styled.h3`
   color: #000;
@@ -33,10 +34,10 @@ const H3 = styled.h3`
   line-height: 26px;
   padding: 0;
   margin: 0;
-  cursor:pointer;
-:hover{
+  cursor: pointer;
+  :hover {
     color: #a32020;
-}
+  }
 `;
 
 const Date = styled.p`
@@ -60,8 +61,8 @@ const Sh = styled.p`
 
 export const News = () => {
   const data = useSelector((state) => state.data);
-  const dispatch = useDispatch()
-
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   return (
     <>
       {data
@@ -71,7 +72,14 @@ export const News = () => {
                 <Img src={e.img} alt="" />
               </div>
               <div>
-                <H3 onClick={()=>dispatch(openNews(e))}>{e.heading}</H3>
+                <H3
+                  onClick={() => {
+                    dispatch(openNews(e));
+                    navigate("/article");
+                  }}
+                >
+                  {e.heading}
+                </H3>
                 <Date>{e.date}</Date>
                 <Sh>{e.subHeading}</Sh>
               </div>

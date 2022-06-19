@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import Search from "./Search";
 import { Link, useNavigate } from "react-router-dom";
-
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
+import { useEffect } from "react";
 const TopDiv = styled.div`
   font-family: Roboto, sans-serif;
   font-weight: 700;
@@ -90,6 +92,14 @@ const Sub = styled.p`
 `;
 
 export const Header = ({ handleToggle }) => {
+  const { user, logout } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (user !== null) {
+      console.log(user);
+      // navigate("/");
+    }
+  }, []);
   const navigate = useNavigate();
   return (
     <div>
@@ -140,7 +150,13 @@ export const Header = ({ handleToggle }) => {
           <p>Sports</p>
           <p>Audio</p>
           <Sub>Subscribe</Sub>
-          <p><Link to="login" target="open">Sign In</Link></p>
+          <>
+            {user ? (
+              <p onClick={() => logout()}>Sign Out</p>
+            ) : (
+              <p onClick={() => navigate("/login")}>Sign In</p>
+            )}
+          </>
         </Category>
         <div>
           {/* <i class="fa-solid fa-magnifying-glass"></i> */}

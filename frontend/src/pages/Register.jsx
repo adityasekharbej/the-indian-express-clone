@@ -1,4 +1,4 @@
-import React, { useContext, useEffect , useState} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "../styles/register.module.css";
 import { BsArrowLeft } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
@@ -7,7 +7,7 @@ import { AiFillApple } from "react-icons/ai";
 import { MdAlternateEmail } from "react-icons/md";
 import { BiLock } from "react-icons/bi";
 import { AuthContext, AuthProvider } from "../contexts/AuthContext";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
   const { user, googleSignIn, createUser } = useContext(AuthContext);
@@ -15,8 +15,8 @@ export const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
   const [error, setError] = useState("");
-  // const navigate = useNavigate();
-
+  const navigate = useNavigate();
+  
   const handleGoogleSignIn = async () => {
     try {
       await googleSignIn();
@@ -38,10 +38,10 @@ export const Register = () => {
 
   useEffect(() => {
     if (user !== null) {
-      console.log(user.uid);
-      // navigate("/");
+      console.log(user);
+      navigate("/");
     }
-  }, []);
+  }, [user]);
 
   return (
     <div className={styles.registerParent}>
@@ -144,7 +144,9 @@ export const Register = () => {
           </div>
           <button onClick={handleSubmit}>Register</button>
           <div className={styles.newTab}>Already have an account?</div>
-          <div className={styles.createAcc}>Sign in</div>
+          <div className={styles.createAcc} onClick={() => navigate("/login")}>
+            Sign in
+          </div>
         </div>
       </div>
     </div>

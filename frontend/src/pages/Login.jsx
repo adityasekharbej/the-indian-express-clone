@@ -20,8 +20,8 @@ export const Login = () => {
 
   useEffect(() => {
     if (user !== null) {
-      console.log(user.uid);
-      // navigate("/");
+      console.log(user);
+      navigate("/");
     }
   }, []);
 

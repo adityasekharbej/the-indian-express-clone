@@ -10,9 +10,9 @@ import { Route, Routes } from "react-router-dom";
 import { India } from "./../components/India";
 import { Cities } from "./../components/Cities";
 import { Entertainment } from "./../components/Entertainment";
-import { Login } from './Login';
-
-
+import { Login } from "./Login";
+import { Register } from "./Register";
+import Singlepage from "../components/Singlepage";
 const FlexWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -32,22 +32,71 @@ function HomePage({ handleToggle }) {
   return (
     <>
       <Header handleToggle={handleToggle} />
-      <FlexWrapper>
-        <div>
-          <TopComponents />
-          <Home />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/news/india" element={<India />} />
-            <Route path="/cities" element={<Cities />} />
-            <Route path="/entertainment" element={<Entertainment />} />
-          </Routes>
-        </div>
-        <div>
-          <Blog />
-          <Best />
-        </div>
-      </FlexWrapper>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <FlexWrapper>
+              <div>
+                <TopComponents />
+                <Home />
+              </div>
+              <div>
+                <Blog />
+                <Best />
+              </div>
+            </FlexWrapper>
+          }
+        />
+        <Route
+          path="/news/india"
+          element={
+            <FlexWrapper>
+              <div>
+                <TopComponents />
+                <India />
+              </div>
+              <div>
+                <Blog />
+                <Best />
+              </div>
+            </FlexWrapper>
+          }
+        />
+        <Route
+          path="/cities"
+          element={
+            <FlexWrapper>
+              <div>
+                <TopComponents />
+                <Cities />
+              </div>
+              <div>
+                <Blog />
+                <Best />
+              </div>
+            </FlexWrapper>
+          }
+        />
+        <Route
+          path="/entertainment"
+          element={
+            <FlexWrapper>
+              <div>
+                <TopComponents />
+                <Entertainment />
+              </div>
+              <div>
+                <Blog />
+                <Best />
+              </div>
+            </FlexWrapper>
+          }
+        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/article" element={<Singlepage />} />
+      </Routes>
       <Footer />
       {/* <Ticker /> */}
     </>

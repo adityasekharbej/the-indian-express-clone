@@ -11,7 +11,7 @@ import {
 // import Ticcker from "./Ticker";
 import { useSelector } from "react-redux";
 
-function Singlepage(props) {
+function Singlepage() {
   const news = useSelector((state) => state.news);
   console.log(news);
   return (
@@ -21,9 +21,7 @@ function Singlepage(props) {
         <div className={styles.headnews}>
           <div className={styles.breakingti}>Must Read</div>
 
-          <div className={styles.breakingbox}>
-            {/* <Ticcker /> */}
-          </div>
+          <div className={styles.breakingbox}>{/* <Ticcker /> */}</div>
         </div>
         <div style={{ marginBottom: "-25px" }}>
           <h1 className={styles.heading}>{news.heading}</h1>
