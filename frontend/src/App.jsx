@@ -1,7 +1,7 @@
 import "./App.css";
 import HomePage from "./pages/HomePage";
 import { useState } from "react";
-import { Menu } from './components/Menu';
+import { Menu } from "./components/Menu";
 
 function App() {
   const [toggle, setToggle] = useState(true);
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-       {toggle ? (
+      {toggle ? (
         <HomePage handleToggle={handleToggle} />
       ) : (
         <Menu handleToggle={handleToggle} />
