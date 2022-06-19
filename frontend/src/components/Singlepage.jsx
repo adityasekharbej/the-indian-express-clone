@@ -8,7 +8,7 @@ import {
   faTwitter,
   faReddit,
 } from "@fortawesome/free-brands-svg-icons";
-// import Ticcker from "./Ticker";
+import Ticcker from "./Ticker";
 import { useSelector } from "react-redux";
 
 function Singlepage() {
@@ -21,7 +21,7 @@ function Singlepage() {
         <div className={styles.headnews}>
           <div className={styles.breakingti}>Must Read</div>
 
-          <div className={styles.breakingbox}>{/* <Ticcker /> */}</div>
+          <div className={styles.breakingbox}><Ticcker /></div>
         </div>
         <div style={{ marginBottom: "-25px" }}>
           <h1 className={styles.heading}>{news.heading}</h1>
