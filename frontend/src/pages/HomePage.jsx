@@ -13,6 +13,10 @@ import { Entertainment } from "./../components/Entertainment";
 import { Login } from "./Login";
 import { Register } from "./Register";
 import Singlepage from "../components/Singlepage";
+import Subscribe from './../components/Subscribe';
+import Ticcker from "../components/Ticker";
+
+
 const FlexWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -98,7 +102,6 @@ function HomePage({ handleToggle }) {
         <Route path="/article" element={<Singlepage />} />
       </Routes>
       <Footer />
-      {/* <Ticker /> */}
     </>
   );
 }

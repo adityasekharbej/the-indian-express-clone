@@ -5,7 +5,7 @@ function Ticcker(props) {
     return (
         <div>
             <div className={styles.newsticker}>
-          <Ticker show={true} isNewsTicker={true} backgrounColour="white" >
+          <Ticker show={true} isNewsTicker={true} backgroundColour="white" >
             <NewsTicker  id="1"  title="A Pune company helps clients increase profits by harnessing emotions of employees, customers "    />
             <NewsTicker id="2" title="Ahead of Worlds, Javelin champ Neeraj Chopra hopes to work towards Tokyo magic in much-awaited return"  />
             <NewsTicker id="3" title="Aishwarya breaks decade-old triple jump record with 14.14m"  />
