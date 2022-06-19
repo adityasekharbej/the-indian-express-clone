@@ -68,7 +68,7 @@
     margin-left: 1%
 }
 
-p {
+/* p {
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -86,7 +86,7 @@ p {
   }
  p:after {
     margin-left: 1%;
-  }
+  } */
   h2{
     margin-bottom: 0%;
   }
