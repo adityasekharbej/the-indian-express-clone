@@ -68,14 +68,14 @@
 .logInGoogle strong{
     margin-left: 1%
 }
-p {
+/* p {
     display: flex;
     flex-direction: row;
     width: 80%;
     margin: auto;
     color: rgb(133,133,133)
-  }
- p:before, p:after{
+  } */
+ /* p:before, p:after{
     content: "";
     flex: 1 1;
     border-bottom: 1px solid rgb(133,133,133);
@@ -86,7 +86,7 @@ p {
   }
  p:after {
     margin-left: 1%;
-  }
+  } */
 
   .info{
     width: 80%;

@@ -10,6 +10,7 @@ import { Route, Routes } from "react-router-dom";
 import { India } from "./../components/India";
 import { Cities } from "./../components/Cities";
 import { Entertainment } from "./../components/Entertainment";
+import { Login } from './Login';
 
 
 const FlexWrapper = styled.div`
@@ -37,7 +38,7 @@ function HomePage({ handleToggle }) {
           <Home />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/india" element={<India />} />
+            <Route path="/news/india" element={<India />} />
             <Route path="/cities" element={<Cities />} />
             <Route path="/entertainment" element={<Entertainment />} />
           </Routes>

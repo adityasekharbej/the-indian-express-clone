@@ -8,13 +8,14 @@ import { MdAlternateEmail } from "react-icons/md";
 import { BiLock } from "react-icons/bi";
 import { useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const [change, setChange] = useState(false);
   const [error, setError] = useState("");
-
+  const navigate = useNavigate();
   const { user, googleSignIn, signIn } = useContext(AuthContext);
 
   useEffect(() => {
@@ -156,7 +157,10 @@ export const Login = () => {
             {change ? "Sign In" : "Continue"}
           </button> */}
           <div className={styles.newTab}>New to The Indian Express?</div>
-          <div className={styles.createAcc}>
+          <div
+            className={styles.createAcc}
+            onClick={() => navigate("/register")}
+          >
             Create an account to get started.
           </div>
         </div>

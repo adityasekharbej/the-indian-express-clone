@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Search from "./Search";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const TopDiv = styled.div`
   font-family: Roboto, sans-serif;
@@ -131,7 +131,7 @@ export const Header = ({ handleToggle }) => {
           <p onClick={() => navigate("/")}>Home</p>
           <p>Explained</p>
           <p>Political Pulse</p>
-          <p onClick={() => navigate("/india")}>India</p>
+          <p onClick={() => navigate("/news/india")}>India</p>
           <p onClick={() => navigate("/cities")}>Cities</p>
           <p>Opinion</p>
           <p onClick={() => navigate("/entertainment")}>Entertainment</p>
@@ -140,7 +140,7 @@ export const Header = ({ handleToggle }) => {
           <p>Sports</p>
           <p>Audio</p>
           <Sub>Subscribe</Sub>
-          <p>Sign In</p>
+          <p><Link to="login" target="open">Sign In</Link></p>
         </Category>
         <div>
           {/* <i class="fa-solid fa-magnifying-glass"></i> */}
