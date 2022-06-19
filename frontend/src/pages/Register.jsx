@@ -6,7 +6,7 @@ import { BsFacebook } from "react-icons/bs";
 import { AiFillApple } from "react-icons/ai";
 import { MdAlternateEmail } from "react-icons/md";
 import { BiLock } from "react-icons/bi";
-import { AuthContext, AuthProvider } from "../contexts/AuthContext";
+import { AuthContext } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
