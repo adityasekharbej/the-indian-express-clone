@@ -23,7 +23,7 @@ export const Login = () => {
       console.log(user);
       navigate("/");
     }
-  }, []);
+  }, [user]);
 
   const handleGoogleSignIn = async () => {
     try {

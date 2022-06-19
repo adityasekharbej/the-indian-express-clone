@@ -2,8 +2,8 @@ import "./App.css";
 import HomePage from "./pages/HomePage";
 import { useState } from "react";
 import { Menu } from "./components/Menu";
-import { Route, Routes } from "react-router-dom";
-import { Login } from "./pages/Login";
+// import { Route, Routes } from "react-router-dom";
+// import { Login } from "./pages/Login";
 // import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
